@@ -45,7 +45,7 @@ function AddTask() {
         ImgURL = data.publicUrl
       }
     }
-    const { error } = await supabase.from('task_tb1')
+    const { error } = await supabase.from('task_tb')
       .insert({
         Title: Title,
         Detail: Detail,
@@ -115,5 +115,6 @@ function AddTask() {
     </>
   )
 }
+
 
 export default AddTask
