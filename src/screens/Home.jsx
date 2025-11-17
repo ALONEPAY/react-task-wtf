@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import task from '../assets/lunol2d.png'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 function Home() {
@@ -24,7 +25,8 @@ function Home() {
       return;
     }
     if (secretcode.toLowerCase() === 'dtisau') {
-      window.location.href = '/showall'
+      //window.location.href = '/showall'
+      navigate('/showall')
     }
     else { 
       swalalerts('Wrong/Invalid Input Code')
@@ -50,3 +52,4 @@ function Home() {
 
 
 export default Home
+
