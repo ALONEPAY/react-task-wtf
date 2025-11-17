@@ -23,7 +23,7 @@ function Home() {
       swalalerts('Please Input Secret Code')
       return;
     }
-    if (secretcode.toLowerCase() === 'Dtisau') {
+    if (secretcode.toLowerCase() === 'dtisau') {
       window.location.href = '/showall'
     }
     else { 
@@ -47,5 +47,6 @@ function Home() {
     </>
   )
 }
+
 
 export default Home
