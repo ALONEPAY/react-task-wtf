@@ -14,7 +14,7 @@ function ShowAlltask() {
     try {
       const fetchData = async () => {
         const { data, error } = await supabase
-          .from('task_tb1') //Database name
+          .from('task_tb') //Database name
           .select("*") //Select all columns
           .order('created_at', { ascending: false })
         if (error) {
@@ -37,7 +37,7 @@ function ShowAlltask() {
         const ImgName = ImageURL.split('/').pop()
         await supabase.storage.from('task_BK').remove([ImgName])
       }
-      const { error } = await supabase.from('task_tb1').delete().eq('id', id)
+      const { error } = await supabase.from('task_tb').delete().eq('id', id)
       if (error) {
         alert("Delete Error")
         throw error
@@ -120,5 +120,6 @@ function ShowAlltask() {
     </>
   )
 }
+
 
 export default ShowAlltask
